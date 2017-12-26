@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
 
 public class LoadingPage extends JFrame{
@@ -16,7 +17,7 @@ public class LoadingPage extends JFrame{
     JLabel label2= new JLabel("I-LIBRARY");
     JLabel label3= new JLabel("Archive and file manager");
     JLabel load=new JLabel(new ImageIcon("/home/ahmed/IdeaProjects/Project/src/images/813.gif"));
-    JLabel login= new JLabel("Login");
+    JLabel login= new JLabel("Identifier");
     JLabel psw= new JLabel("Password");
     JTextField email= new JTextField(12);
     JPasswordField pass= new JPasswordField(12);
@@ -79,6 +80,7 @@ public class LoadingPage extends JFrame{
         connexion.setBackground(c1);
         connexion.setForeground(Color.WHITE);
         connexion.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
+        connexion.setCursor(new Cursor(Cursor.HAND_CURSOR));
         Action saveAction = new AbstractAction("Enter") {
 
             @Override
@@ -126,7 +128,13 @@ public class LoadingPage extends JFrame{
         String req="SELECT Nom, Mdp FROM Epi WHERE ( Nom=\""+email.getText()+"\" AND Mdp=\""+password+"\" )";
         System.out.println(req);
         ResultSet a= cx.requeteSelect(req);
-        System.out.println(a);
+        try {
+            while (a.next()) {
+            System.out.println("1"+a.getString("Nom"));
+                System.out.println("2"+a.getString("Mdp"));}
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         if (a == null) {
             return false;
         }

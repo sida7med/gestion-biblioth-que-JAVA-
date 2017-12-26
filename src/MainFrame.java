@@ -50,6 +50,7 @@ public class MainFrame extends JFrame implements ActionListener{
         mod.setBackground(Color.BLACK);
         mod.setForeground(Color.LIGHT_GRAY);
         mod.setFont(mod.getFont().deriveFont(14.0f));
+        mod.setCursor(new Cursor(Cursor.HAND_CURSOR));
         mod.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 mod.setBackground(UIManager.getColor("control"));
@@ -65,6 +66,7 @@ public class MainFrame extends JFrame implements ActionListener{
         conf.setBackground(Color.BLACK);
         conf.setForeground(Color.LIGHT_GRAY);
         conf.setFont(mod.getFont().deriveFont(14.0f));
+        conf.setCursor(new Cursor(Cursor.HAND_CURSOR));
         conf.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 conf.setBackground(UIManager.getColor("control"));
@@ -80,6 +82,7 @@ public class MainFrame extends JFrame implements ActionListener{
         list.setBackground(Color.BLACK);
         list.setForeground(Color.LIGHT_GRAY);
         list.setFont(list.getFont().deriveFont(14.0f));
+        list.setCursor(new Cursor(Cursor.HAND_CURSOR));
         list.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 list.setBackground(UIManager.getColor("control"));
@@ -96,6 +99,7 @@ public class MainFrame extends JFrame implements ActionListener{
         aj.setBackground(Color.BLACK);
         aj.setForeground(Color.LIGHT_GRAY);
         aj.setFont(aj.getFont().deriveFont(14.0f));
+        aj.setCursor(new Cursor(Cursor.HAND_CURSOR));
         aj.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 aj.setBackground(UIManager.getColor("control"));

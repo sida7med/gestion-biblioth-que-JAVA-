@@ -89,9 +89,13 @@ public class Gallery extends JPanel {
         panel.setBorder(BorderFactory.createEmptyBorder(40,70,0,100));
         b.setBackground(new Color(0,0,0));
         b.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+        b.setCursor(new Cursor(Cursor.HAND_CURSOR));
         JButton b1= new JButton("Modify");
+        b1.setCursor(new Cursor(Cursor.HAND_CURSOR));
         JButton b2= new JButton("Delete");
+        b1.setCursor(new Cursor(Cursor.HAND_CURSOR));
         JButton b3= new JButton("Lend");
+        b3.setCursor(new Cursor(Cursor.HAND_CURSOR));
         b1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
